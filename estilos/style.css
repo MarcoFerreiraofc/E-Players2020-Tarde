@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+/* font-family: 'Titillium Web', sans-serif; */
 
-
- /*Indentidade Visual*/
+/* Variaveis CSS */ /*Indentidade Visual*/
 :root{
     --header: #1E1C21;
     --background: #000000;
@@ -27,7 +27,7 @@ body{
     font-family: var(--font);
 }
 
-/* Header */
+/* Cabeçalho - Header */
 .header{
     width: 100%;
     height: 5em; /*1em = 16px ou o font-size do elemento que se tem referencia* (rem - pega o tamanho da font-size do proprio navegador)*/
@@ -47,7 +47,7 @@ body{
     margin: 0 auto;
 }
 
-.flex-content{
+.content-flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,14 +72,18 @@ body{
 }
 
 .menu-header a:hover{
-    background-color: var(--red);
+    background-color: #8326EF;
 }
 
 #header-bars{
     display: none;
 }
 
-/* Banner */
+.menu-header-response{
+    display: none;
+}
+
+/* Banner - Main */
 .banner{
     width: 100%;
     height: 607px;
@@ -128,7 +132,7 @@ body{
     font-size: 30px;
     font-family: var(--font);
     padding: 10px 45px;
-    background-color: var(--red);
+    background-color: #8326EF;
     border-radius: 10px;
     position: relative;
     top: 40px;
@@ -137,9 +141,7 @@ body{
 
 .text-banner a:hover{
     background-color: white;
-    color: var(--red);
-    transform: scale(1.5);
-    transition: 0.4s;
+    color: #8326EF;
 }
 
 /* Games */
@@ -161,8 +163,8 @@ body{
 }
 
 .content-games img:hover{
+    transition: 0.5s; 
     transform: scale(1.5);
-    transition: 0.5s;
 }
 
 .content-games img{
@@ -227,7 +229,7 @@ body{
     justify-content: center;
 }
 
-/* Matches */
+/* partidas */
 .matches{
     color: white;
     width: 100%;
@@ -245,7 +247,6 @@ body{
 }
 
 .live-matches{
-    text-transform: uppercase;
     width: 30%;
     margin: 0 6%;
     display: flex;
@@ -258,6 +259,7 @@ body{
 
 .live-matches h2, .later-matches h2{
     margin-right: 20px;
+    text-transform: uppercase;
 }
 
 .teams-matches{
@@ -268,7 +270,7 @@ body{
 }
 
 .teams-matches:hover{
-    border: 4px solid var(--blue)
+    border: 4px solid var(--blue);
 }
 
 #espacamento{
@@ -277,9 +279,9 @@ body{
 
 .teams-matches p, img{
     padding: 0 13px;
-}
+} 
 
-/* News */
+/* noticias */
 .news{
     width: 100%;
     height: 61.25em;
@@ -327,8 +329,7 @@ body{
 }
 
 .news-bloco:hover{
-    transform: scale(1.1);
-    border: solid var(--red);
+    border: 4px solid #8326EF;
 }
 
 
@@ -336,7 +337,7 @@ body{
     color: white;
     margin-bottom: 8px;
     padding: 10px 0px;
-    border: 5px solid var(--red);
+    border: 5px solid var(--blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,7 +345,7 @@ body{
 }
 
 .team-tabela:hover{
-    border: 4px solid var(--blue);
+    border: 5px solid#8326EF;
 }
 
 .team-tabela p{
@@ -372,7 +373,6 @@ body{
 
 .image-bloco img{
     padding: 0;
-
 }
 
 .tabela-news{
@@ -382,7 +382,7 @@ body{
     box-shadow: 1px 1px 20px 4px #000000;
 }
 
-/* Footer */
+/* Rodapé */
 .footer{
     width: 100%;
     background-color: black;
@@ -397,74 +397,629 @@ body{
     margin: 10px 10%;
 }
 
-.line-footer{
+.superior-footer{
     width: 100%;
-    border: 1px solid #cdcdcd;
-    background-color: #cdcdcd;
-    margin: 25px 0;
-}
-
-.inferior-footer{
-    margin-bottom: 15px;
+    height: 75%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-footer{
+.links-uteis-footer{
     width: 30%;
 }
 
-.logo-footer img{
-    width: 100%;
-    max-width: 250px;
-}
-
-.direitos-footer{
+.links-uteis-footer h4{
     color: white;
+    text-decoration: underline;
 }
 
-.direitos-footer span:hover{
-    color: var(--red);
+.links-uteis-footer a{
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
 }
 
-.buttons-footer{
+.links-uteis-footer a:hover{
+    text-decoration: none;
+    color: #8326EF;
+}
+
+.mapa-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa-site-footer h4{
+    color: white;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+.mapa-site-footer ul{
+    display: flex;
+}
+
+.mapa-site-footer a{
+    color: white;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.mapa-site-footer a:hover{
+    color: #8326EF;
+    text-decoration: none;
+}
+
+.social-medias-footer{
     width: 30%;
     display: flex;
     justify-content: flex-end;
 }
 
-.buttons-footer ul{
-    display: flex;
-}
-
-.buttons-footer a{
+.social-medias-footer h4{
     color: white;
-    padding: 10px;
+    padding: 7px;
+    text-decoration: underline;
 }
 
-.buttons-footer a:hover{
-    text-decoration: none;
-    color: var(--red);
+.redes-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links-redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-redes img{
+    transition: 0.2s;
+}
+
+.links-redes img:hover{
+    transform: scale(1.2);;
 }
 
 
 
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (max-width: 75em){
+    /* Menu Superior - Header */
+    .content img{
+        margin-right: 2%;
+    }
+    
+    .content-flex{
+        justify-content: flex-start;
+    }
+    
+    .menu-header a{
+        font-size: 1.2em;
+    }
 
+    /* Banner - Main */
+    
+    .image-banner img{
+        width: 100%;
+    }
+    
+    .text-banner h1{
+        font-size: 4.37em;
+    }
+    
+    .text-banner p{
+        font-size: 1.5em;
+    }
+    
+    .text-banner a{
+        font-size: 25px;
+        padding: 5px 35px;
+        top: 30px;
+    }
 
+    /* Games - Section */
+    .content-games img{
+        opacity: 1;
+    }
 
-@media screen and (max-width: 74.93em){
+    /* About - Section */
+    .about{
+        height: auto;
+    }
 
+    .back-about{
+        height: 35.5em;
+    }
+
+    .angulation-about{
+        height: 30.125em;
+    }
+
+    .text-about{
+        height: 390px;
+    }
+
+    .image-about{
+        width: 40%;
+    }
+
+    /* Matches - Section */
+    .matches{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-matches{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .live-matches{
+        width: auto;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .later-matches{
+        width: auto;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .title-matches-live,  .title-matches-later{
+        width: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .teams-matches{
+        margin: 10px;
+    }
+
+    .live-matches h2, .later-matches h2{
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #espacamento{
+        margin-right: 0px;
+    }
+
+    /* News - Section */
+    .news{
+        width: 100%;
+        height: auto;
+        background-color: #1E1C21;
+    }
+
+    .news h2{
+        color: white;
+        font-size: 35px;
+        margin-left: 10%;
+        padding: 30px;
+        padding-left: 0px;
+    }
+
+    .content-news{
+        width: 80%;
+        margin: 0 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-news{
+        width: 100%;
+    }
+
+    .bloco-news{
+        width: 100%;
+        margin-bottom: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .content-tabela{
+        width: 100%;
+    }
+
+    .tabela-news{
+        width: 100%;
+        height: auto;
+        background: linear-gradient(180deg, #000000 0%, rgba(83, 83, 83, 0.577381) 25%, rgba(196, 196, 196, 0) 87.5%);
+        box-shadow: 1px 1px 20px 4px #000000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .team-tabela{
+        width: 250px;
+        height: 115px;
+        color: white;
+        margin: 20px 10px;
+        padding: 10px 0px;
+        border: 3px solid var(--blue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.2s;
+    }
 }
 
-@media screen and (max-width: 61.93em){ 
+/* Large devices (desktops, 992px and up)*/
+@media screen and (max-width: 62em){
+    /* Menu Superior - Header */
+    .header img{
+        width: 35%;
+    }
 
+    .menu-header ul{
+        justify-content: space-around;
+    }
+    
+    .menu-header a{
+        padding: 0.9em 0px;
+        font-size: 1em;
+    }
+
+     /* Banner - Main */
+    .banner{
+        width: 100%;
+        height: 507px;
+     }
+
+    .content-banner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-banner{
+        display: none;
+    }
+
+    .text-banner{
+        width: 600px;
+        height: 285px;
+        margin: 0px;
+    }
+
+    .text-banner h1{
+        font-size: 90px;
+    }
+
+    .text-banner p{
+        font-size: 30px;
+    }
+
+    .text-banner a{
+        font-size: 30px;
+        padding: 10px 45px;
+        top: 40px;
+    }
+
+    /* Games - Section */
+    .content-games img{
+        width: 100%;
+    }
+
+    /* About - Section */
+    .angulation-about{
+        height: 24.125em;
+    }
+
+    .container-about{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .text-about{
+        width: 100%;
+        height: 320px;
+        margin-left: 0;
+    }
+    
+    .image-about{
+        display: none;
+    }
+    /* Matches - Section */
+    .matches{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-matches{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .live-matches{
+        width: 368px;
+        margin: 10px 0;
+        display: block;
+    }
+
+    .later-matches{
+        width: 368px;
+        margin: 10px 0;
+        display: block;
+    }
+
+    .teams-matches{
+        width: 358px;
+        margin-bottom: 10px;
+    }
+
+    .title-matches-later, .title-matches-live{
+        width: 368px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .live-matches h2, .later-matches h2{
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #espacamento{
+        margin-right: 0px;
+    }
+
+    /* News - Section */
+    .team-tabela{
+        width: 250px;
+        height: 115px;
+        color: white;
+        margin: 6px;
+        padding: 10px 0px;
+        border: 3px solid var(--blue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.2s;
+    }
+
+    .links-uteis-footer{
+        display: none;
+    }
+
+    .social-medias-footer{
+        display: none;
+    }
+
+    .buttons-footer{
+        display: none;
+    }
+
+    .superior-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inferior-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-@media screen and (max-width: 47.93em){
+/* Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 48em){
+    /* Menu Superior - Header */
+    .header img{
+        width: 100%;
+        max-width: 15em;
+        display: block;
+    }
 
-}
+    .content{
+        width: 93%;
+    }
 
+    .flex-content{
+        justify-content: space-between;
+    }
+    
+    .menu-header{
+        display: none;
+    }
+    
+    #header-bars{
+        display: inline;
+        font-size: 40px;
+        color: white;
+    }
+
+    .menu-header-response {
+        display: none;
+    }
+
+    .menu-header-response a{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0.4em 0.22em;
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+        transition: 0.1s;
+        border: 2px solid rgb(194, 0, 0, 0.3);
+    }
+
+    .menu-header-response a:hover{
+        border: 2px solid rgb(194, 0, 0, 1);
+    }
+
+     /* Banner - Main */
+     .banner{
+        height: 457px;
+     }
+
+    .text-banner h1{
+        font-size: 75px;
+    }
+
+    .text-banner p{
+        font-size: 25px;
+    }
+
+    .text-banner a{
+        font-size: 25px;
+        padding: 5px 30px;
+        top: 25px;
+    }
+
+    /* Games - Section */
+    #counter-strike-games{
+        display: none;
+    }
+
+    /* About - Section */
+    .angulation-about{
+        height: 24.125em;
+    }
+
+    .text-about{
+        height: 340px;
+    }   
+
+    /* News - Section */
+    .bloco-news{
+        width: 100%;
+        margin-bottom: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .news-bloco{
+        width: 14.81em;
+        height: 22.87em;
+        background: linear-gradient(180deg, #000000 0%, rgba(83, 83, 83, 0.577381) 25%, rgba(196, 196, 196, 0) 87.5%);
+        box-shadow: 1px 1px 20px 4px #000000;
+        display: flex;
+        flex-direction: column;
+        transition: 0.2s;
+        margin: 15px 0;
+    }
+
+    .none-mobile{
+        display: none;
+    }
+}   
+
+/* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 36em){
+    /* Menu Superior - Header */
+    .content img{
+        width: 45%;
+    }
+    #header-bars{
+        font-size: 25px;
+    }
 
+     /* Banner - Main */
+     .banner{
+        height: auto;
+     }
+
+     .text-banner{
+         height: 190px;
+         margin: 40px 0;
+     }
+
+    .text-banner h1{
+        font-size: 50px;
+    }
+
+    .text-banner p{
+        font-size: 16px;
+    }
+
+    .text-banner a{
+        font-size: 25px;
+        padding: 5px 30px;
+        top: 20px;
+    }
+
+    /* Games - Section */
+    .games{
+        height: auto;
+    }
+
+    .content-games{
+        margin: 20px 0;
+    }
+
+    #league-legends-games{
+        display: none;
+    }
+
+    /* About - Section */
+
+    .about{
+        height: auto;
+    }
+
+    .angulation-about{
+        height: 30.125em;
+    }
+
+    .text-about{
+        height: 500px;
+        margin: 10px 0;
+    }
+
+    .none-mobile2{
+        display: none;
+    }
+
+    /* footer - footer */
+
+    .inferior-footer{
+        justify-content: center;
+    }
+
+    .logo-footer{
+        display: none;
+    }
+
+    .mapa-site-footer a{
+        margin: 3px;
+    }
+
+    .mapa-site-footer ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
+/* By: Marco A. */

@@ -3,14 +3,14 @@
 <head> <!--Incio Head-->
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!--Importação dos icones do font awesome-->
+    <link rel="stylesheet" href="estilos/style.css"> 
     <title>E-Players</title>
 </head> <!--Fim Head-->
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="content flex-content">
+        <div class="content content-flex">
             <img src="img/Logo.svg" alt="logo E-Players">
             <nav class="menu-header">
                 <ul>
@@ -21,9 +21,18 @@
                     <li><a href="">Cadastro/login</a></li>
                 </ul>
             </nav>
-            <a href="#" id="header-bars"><i class="fas fa-bars"></i></a> 
+            <a href="#" id="header-bars" onclick="botaoDoMenu()"><i class="fas fa-bars"></i></a> <!--Icone barras para mobile-->
         </div>
     </header>
+    <nav class="menu-header-response" id="menu-response">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Horarios</a></li>
+            <li><a href="#">Campeonatos</a></li>
+            <li><a href="#">Resultados</a></li>
+            <li><a href="">Cadastro/login</a></li>
+        </ul>
+    </nav>
 
     <!-- Banner -->
     <main class="banner">
@@ -42,15 +51,15 @@
     <!-- Games -->
     <section class="games">''
         <div class="content-games">
-            <a href="#"><img src="img/logo-f1.png" alt="Logo formula 1"></a>
-            <a href="#"><img src="img/logo-lol.png" alt="Logo League of Legends"></a>
-            <a href="#"><img src="img/logo-cs.png" alt="Logo Counter-Strike"></a>
-            <a href="#"><img src="img/logo-valorant.png" alt="Logo Valorant"></a>
-            <a href="#"><img src="img/logo-fifa.png" alt="Logo Fifa"></a>
+            <a href="#" class="image-games"><img src="img/logo-f1.png" alt="Logo formula 1"></a>
+            <a href="#" class="image-games"><img src="img/logo-lol.png" alt="Logo League of Legends" id="league-legends-games"></a>
+            <a href="#" class="image-games"><img src="img/logo-cs.png" alt="Logo Counter-Strike" id="counter-strike-games"></a>
+            <a href="#" class="image-games"><img src="img/logo-valorant.png" alt="Logo Valorant"></a>
+            <a href="#" class="image-games"><img src="img/logo-fifa.png" alt="Logo Fifa"></a>
         </div>
     </section>
 
-    <!-- About -->
+    <!-- sobre -->
     <section class="about">
            <div class="back-about">
                 <div class="angulation-about">
@@ -70,11 +79,13 @@
            </div>
     </section>
 
-    <!-- Matches -->
+    <!-- partidas -->
     <section class="matches">
         <div class="content-matches">
             <div class="live-matches">
-                <h2>Ao <br>vivo</h2>
+                <div class="title-matches-live">
+                    <h2>Ao vivo</h2>
+                </div>
                 <div class="teams-matches">
                     <p>SK</p>
                     <img src="img/sk-logo.png" alt="logo time SK">
@@ -84,7 +95,9 @@
                 </div>
             </div>
             <div class="later-matches">
-                <h2>Em <br>Breve</h2>
+                <div class="title-matches-later">
+                    <h2>Em Breve</h2>
+                </div>
                 <div class="teams-matches" id="espacamento">
                     <p>SK</p>
                     <img src="img/sk-logo.png" alt="logo time SK">
@@ -103,7 +116,7 @@
         </div>
     </section>
 
-    <!-- News -->
+    <!-- noticias -->
     <section class="news">
         <h2>Noticias</h2>
         <div class="content-news">
@@ -137,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bloco-news">
+                <div class="bloco-news none-mobile">
                     <div class="news-bloco">
                         <div class="image-bloco">
                             <img src="img/capa-noticia6.png" alt="Capa da noticia">
@@ -199,7 +212,7 @@
                         </div>
                         <p>1/12/2020 19:00</p>
                     </div>
-                    <div class="team-tabela">
+                    <div class="team-tabela none-mobile2">
                         <div class="placar-tabela">
                             <p>SK</p>
                             <img src="img/sk-logo.png" alt="Logo do time Sk">
@@ -209,7 +222,7 @@
                         </div>
                         <p>1/12/2020 19:00</p>
                     </div>
-                    <div class="team-tabela">
+                    <div class="team-tabela none-mobile2">
                         <div class="placar-tabela">
                             <p>SK</p>
                             <img src="img/sk-logo.png" alt="Logo do time Sk">
@@ -219,7 +232,7 @@
                         </div>
                         <p>1/12/2020 19:00</p>
                     </div>
-                    <div class="team-tabela">
+                    <div class="team-tabela none-mobile2">
                         <div class="placar-tabela">
                             <p>SK</p>
                             <img src="img/sk-logo.png" alt="Logo do time Sk">
@@ -230,33 +243,60 @@
                         <p>1/12/2020 19:00</p>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- rodapé -->
     <footer class="footer">
         <div class="content-footer">
-           
-
-            <div class="line-footer"></div>
-
-            <div class="inferior-footer">
-                <div class="logo-footer">
-                    <img src="img/Logo.svg" alt="Logo E-Players">
-                </div>
-                <div class="direitos-footer">
-                    <p>Todos os direitos reservados a <span>Marco A. </span>© 2020</p>
-                </div>
-                <div class="buttons-footer">
+            <div class="superior-footer">
+                <div class="links-uteis-footer">
+                    <h4>Links Uteis</h4>
                     <ul>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Ajuda</a></li>
-                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Regras de utilização</a></li>
+                        <li><a href="#">Mande nos uma mensagem</a></li>
                     </ul>
                 </div>
+                <div class="mapa-site-footer">
+                    <div class="mapa-content">
+                        <h4>Mapa do Site</h4>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Campeonatos</a></li>
+                            <li><a href="#">Resultados</a></li>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Buscar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-medias-footer">
+                    <div class="redes-content">
+                        <h4>Redes Sociais</h4>
+                        <div class="links-redes">
+                            <a href="#"><img src="img/instagram.png" alt="Logo do Instagram"></a>
+                            <a href="#"><img src="img/youtube.png" alt="Logo do Youtube"></a>
+                            <a href="#"><img src="img/linkedin.png" alt="Logo Linkedin"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+         
+<script>
+    function botaoDoMenu() {
+      var navMobile = document.getElementById("menu-response");
+
+      if (navMobile.style.display === "block") {
+        navMobile.style.display = "none";
+      } else {
+        navMobile.style.display = "block";
+      }
+    }
+ </script>
 </html>
+
+<!-- By: Marco A. -->
